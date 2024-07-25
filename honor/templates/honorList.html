@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+
+班级荣誉
+
+{% endblock %}
+
+{% block content %}
+
+<link rel = "stylesheet" href = "{% static 'css/honor.css' %}">
+
+<div class = "container-fluids">
+    <img class = "img-responsive " src = "{% static 'img/honor_pic.png' %}" style = "max-width: 100%;">
+</div>
+
+<div class = "container-fluid">
+    <div class = "row">
+        <div class = "col-md-3">
+            <div class = "side_bar_title">
+                班级荣誉
+            </div>
+            <div class = "side_bar_list">
+                <ul class = "list-group">
+                    <li class = "list-group-item"> <a href = "{% url 'honor:honor' 'academic_honor' %}"> 学术荣誉 </a> </li>
+                </ul>
+                <ul class = "list-group">
+                    <li class = "list-group-item"> <a href = "{% url 'honor:honor' 'art_honor' %}"> 艺术荣誉 </a> </li>
+                </ul>
+                <ul class = "list-group">
+                    <li class = "list-group-item"> <a href = "{% url 'honor:honor' 'pe_honor' %}"> 体育荣誉 </a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class = "col-md-9">
+            <div class = "honor-heading" style = "margin-top: 30px;"> {{honorName}} </div>
+            <div class = "row">
+                {% for honors in honorList %}
+                    <div class = "col-md-4 col-sm-6">
+                        <div class = "thumbnail">
+                            <img src = "{{honors.photo.url}}">
+                            <h5> {{honors.description}} </h5>
+                        </div>
+                    </div>
+                {% endfor %}
+                
+                {% if pageData %}
+                    <div class = "paging">
+                        <ul id = "pages" class = "pagination pagination-sm pagination-xs">
+                            {% if pageData.first %}
+                                <li> <a href = "?page=1"> 1 </a> </li>
+                            {% endif %}
+                            {% if pageData.left %}
+                                {% if pageData.left_has_more %}
+                                <li> <span> ... </span> </li>
+                                {% endif %}
+                                {% for i in pageData.left %}
+                                    <li> <a href = "?page={{i}}"> {{i}} </a> </li>
+                                {% endfor %}
+                            {% endif %}
+                            <li class = "active"> <a href = "?page = {{pageData.page}}"> {{pageData.page}} </a> </li>
+                            {% if pageData.right %}
+                                {% for i in pageData.right %}
+                                    <li> <a href = "?page={{i}}"> {{i}} </a> </li>
+                                {% endfor %}
+                                {% if pageData.right_has_more %}
+                                    <li> <span> ... </span> </li>
+                                {% endif %}
+                            {% endif %}
+                            {% if pageData.last %}
+                                <li> <a href = "?page = {{pageData.total_pages}}"> {{pageData.total_pages}} </a> </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

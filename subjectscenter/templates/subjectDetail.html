@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+
+学科新闻详情
+
+{% endblock %}
+
+{% block content %}
+
+<link rel = "stylesheet" href = "{% static 'css/subjectscenter.css' %}">
+
+<div class = "container">
+    <div class = "subjectnews-title"> {{mysubject.title}} </div>
+    <div class = "subjectnews-publishDate"> {{mysubject.publishDate}} </div>
+    <div class = "subjectnews-views"> {{mysubject.views}} </div>
+    <div class = "subjectnews-content"> {{mysubject.description|safe}} </div>
+</div>
+
+{% endblock %}

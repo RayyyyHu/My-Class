@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+
+学科中心
+
+{% endblock %}
+
+{% block content %}
+
+<link rel = "stylesheet" href = "{% static 'css/subjectscenter.css' %}">
+
+<div class = "container-fluids">
+    <img class = "img-responsive" src = "{% static 'img/subjectscenter_pic.png' %}">
+</div>
+
+<div class = "container">
+    <div class = "page-header">
+        <h1> {{subjectName}} <small> 学科中心 </small> </h1>
+    </div>
+    <div class = "row">
+        <div class = "col-sm-6 col-md-4">
+            {% for subjectnews in subjectList %}
+                <div class = "thumbnail">
+                    <img src = "{{subjectnews.photo.url}}">
+                    <div class = "caption">
+                        <h3> {{subjectnews.title}} <small> {{subjectnews.publishDate}} </small> </h3>
+                        <p> {{subjectnews.abstract}} </p>
+                        <p> <a href = "{% url 'subjectscenter:subjectDetail' subjectnews.id %}" class = "btn btn-primary" role = "button"> 查看详情 </a> </p>
+                    </div>
+                </div>
+            {% endfor %}
+
+            {% if pageData %}
+            <div class = "paging">
+                <ul id = "pages" class = "pagination pagination-sm pagination-xs">
+                    {% if pageData.first %}
+                        <li> <a href = "?page=1"> 1 </a> </li>
+                    {% endif %}
+                    {% if pageData.left %}
+                        {% if pageData.left_has_more %}
+                        <li> <span> ... </span> </li>
+                        {% endif %}
+                        {% for i in pageData.left %}
+                            <li> <a href = "?page={{i}}"> {{i}} </a> </li>
+                        {% endfor %}
+                    {% endif %}
+                    <li class = "active"> <a href = "?page = {{pageData.page}}"> {{pageData.page}} </a> </li>
+                    {% if pageData.right %}
+                        {% for i in pageData.right %}
+                            <li> <a href = "?page={{i}}"> {{i}} </a> </li>
+                        {% endfor %}
+                        {% if pageData.right_has_more %}
+                            <li> <span> ... </span> </li>
+                        {% endif %}
+                    {% endif %}
+                    {% if pageData.last %}
+                        <li> <a href = "?page = {{pageData.total_pages}}"> {{pageData.total_pages}} </a> </li>
+                    {% endif %}
+                </ul>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

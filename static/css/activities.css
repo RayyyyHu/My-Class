@@ -1,0 +1,76 @@
+.activities_home_title {
+    color: #c9302c;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #c9302c;
+    padding-bottom: 10px;
+    font-size: 42px;
+    font-weight: bold;
+    
+}
+
+
+.thumbnail {
+    border: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.thumbnail:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.thumbnail .caption {
+    padding: 20px;
+}
+
+.thumbnail h3 {
+    color: #c9302c;
+    margin-bottom: 10px;
+}
+
+.thumbnail small {
+    color: #777777;
+}
+
+.thumbnail p {
+    color: #333333;
+}
+
+.btn-theme {
+    background-color: #c9302c;
+    border-color: #c9302c;
+}
+
+.btn-theme:hover {
+    background-color: #a22d29;
+    border-color: #a22d29;
+}
+
+.activities_details_title {
+    color: #c9302c;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.activities_details_date,
+.activities_details_views {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.activities_details_content {
+    margin-top: 15px;
+    line-height: 1.6;
+}

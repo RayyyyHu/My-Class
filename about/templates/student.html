@@ -1,0 +1,335 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+
+我们的同学
+
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/student.css' %}">
+
+<img class="img-responsive" src="{% static 'img/groupphoto1.png' %}">
+
+<div class="container-fluid">
+    <div class="col-md-3">
+        <div class="side_bar_title">
+            关于我们
+        </div>
+        <div class="side_bar_list">
+            <ul class="list-group">
+                <li class="list-group-item"> <a href="{% url 'about:classes' %}"> 班级 </a> </li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item"> <a href="{% url 'about:student' %}"> 学生 </a> </li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item"> <a href="{% url 'about:teacher' %}"> 教师 </a> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="container-fluids">
+            <div class="row">
+                <div class="col-md-4"> <img class="img-responsive img-circle" src="{% static 'img/classes_1.jpg' %}"
+                        style="margin-top: 30px;"> </div>
+                <div class="col-md-4"> <img class="img-responsive img-circle" src="{% static 'img/classes_2.jpg' %}"
+                        style="margin-top: 30px;"> </div>
+                <div class="col-md-4"> <img class="img-responsive img-circle" src="{% static 'img/classes_4.jpg' %}"
+                        style="margin-top: 30px;"> </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <br>
+            <br>
+            <nr>
+                <p style="text-align: center; font-size: 30px; color: #d9534f;"> 2022年9月，我们一起在天府七中相遇 </p>
+                <p style="text-align: center; font-size: 30px; color: #d9534f;"> 四年，我们一起将这份缘分续写。 </p>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <div class>
+            <div class="row">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col-md-1"> No. </th>
+                            <th scope="col-md-5"> 姓名 </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 1 </th>
+                            <td> 安美琪 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 2 </th>
+                            <td> 陈鹏宇 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 3 </th>
+                            <td> 陈薪羽 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 4 </th>
+                            <td> 丁佳欣 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 5 </th>
+                            <td> 邓雅匀 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 6 </th>
+                            <td> 樊凌峰 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 7 </th>
+                            <td> 梵祖铨 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 8 </th>
+                            <td> 风心铭 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 9 </th>
+                            <td> 韩富礼 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 10 </th>
+                            <td> 郝梓翔 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 11 </th>
+                            <td> 贺锦嘉 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 12 </th>
+                            <td> 胡偌铭 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 13 </th>
+                            <td> 胡衔闲 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 14 </th>
+                            <td> 黄与为 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 15 </th>
+                            <td> 蒋雨贝 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 16 </th>
+                            <td> 李秉润 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 17 </th>
+                            <td> 李世彦 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 18 </th>
+                            <td> 罗浩予 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 19 </th>
+                            <td> 倪瑞悦 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 20 </th>
+                            <td> 欧阳宏林 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 21 </th>
+                            <td> 漆宇轩 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 22 </th>
+                            <td> 覃航宇 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 23 </th>
+                            <td> 覃姝雯 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 24 </th>
+                            <td> 覃肖箫 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 25 </th>
+                            <td> 宋家好 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 26 </th>
+                            <td> 谭博文 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 27 </th>
+                            <td> 唐语兰 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 28 </th>
+                            <td> 童诗涵 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 29 </th>
+                            <td> 王翱翔 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 30 </th>
+                            <td> 王凯 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 31 </th>
+                            <td> 王羿 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 32 </th>
+                            <td> 王诗宇 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 33 </th>
+                            <td> 王悦然 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 34 </th>
+                            <td> 魏佳怡 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 35 </th>
+                            <td> 谢睿奇 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 37 </th>
+                            <td> 徐梓函 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 38 </th>
+                            <td> 叶科鑫 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 39 </th>
+                            <td> 易建全 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 40 </th>
+                            <td> 张靖涵 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 41 </th>
+                            <td> 张思源 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 42 </th>
+                            <td> 张益豪 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 43 </th>
+                            <td> 赵若彤 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 44 </th>
+                            <td> 赵子恒 </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> 45 </th>
+                            <td> 周柘安 </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

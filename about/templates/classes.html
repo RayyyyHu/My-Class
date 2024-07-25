@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+
+我们的班级
+
+{% endblock %}
+
+{% block content %}
+
+<img class = "img-responsive" src = "{% static 'img/groupphoto1.png' %}">
+
+<div class = "container-fluid">
+    <div class = "row">
+        <div class = "col-md-3">
+            <div class = "side_bar_title">
+                关于我们
+            </div>
+            <div class = "side_bar_list">
+                <ul class = "list-group">
+                    <li class = "list-group-item"> <a href = "{% url 'about:classes' %}"> 班级 </a> </li>
+                </ul>
+                <ul class = "list-group">
+                    <li class = "list-group-item"> <a href = "{% url 'about:student' %}"> 学生 </a> </li>
+                </ul>
+                <ul class = "list-group">
+                    <li class = "list-group-item"> <a href = "{% url 'about:teacher' %}"> 教师 </a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class = "col-md-9">
+            <div class = "page-header">
+                <h1> 同窗而遇，携手四年 <small> 那年，缘分让我们在天府七中相遇 </small> </h1>
+            </div>
+            <div>
+                <div class = "row">
+                    <div class = "col-md-6"> <img class = "img-responsive" src = "{% static 'img/classes_15.jpg' %}"> </div>
+                    <div class = "col-md-6"> <img class = "img-responsive" src = "{% static 'img/classes_16.jpg' %}"> </div>
+                </div>
+                <br>
+                <br>
+                <p class = "lead"> 有人说，一个人大约就是靠1%的光亮，去照亮99%的灰暗，成就100%的平凡人生。在追光5班这个小光圈里，我们所有追光人，说我们的故事，找我们的微光，点亮我们的青春，奔赴我们热爱的人生。 </p>
+                <div class = "row">
+                    <div class = "col-xs-6 col-md-3">
+                        <img src = "{% static 'img/classes_14.jpg' %}" style = "max-width: 100%;">
+                    </div>
+                    <div class = "col-xs-6 col-md-3">
+                        <img src = "{% static 'img/classes_22.jpg' %}" style = "max-width: 100%;">
+                    </div>
+                    <div class = "col-xs-6 col-md-3">
+                        <img src = "{% static 'img/classes_23.jpg' %}" style = "max-width: 100%;">
+                    </div>
+                    <div class = "col-xs-6 col-md-3">
+                        <img src = "{% static 'img/classes_24.jpg' %}" style = "max-width: 100%;">
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

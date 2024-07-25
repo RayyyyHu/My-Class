@@ -1,0 +1,47 @@
+body {
+    color: #333;
+}
+
+.page-header h1 {
+    color: #d9534f;
+}
+
+.lead {
+    color: #777;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    padding: 20px;
+}
+
+.container.page-header {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.row img {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.row img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+}

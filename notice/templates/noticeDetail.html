@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+
+活动详情
+
+{% endblock %}
+
+{% block content %}
+
+<link rel = "stylesheet" href = "{% static 'css/notice.css' %}">
+
+<div class = "container">
+    <div class = "notice_details_title"> {{mynotice.title}} </div>
+    <div class = "notice_details_date"> 发布时间：{{mynotice.publishDate}} </div>
+    <div class = "notice_details_content"> {{mynotice.description|safe}} </div>
+</div>
+
+{% endblock %}

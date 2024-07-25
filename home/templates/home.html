@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+
+首页
+
+{% endblock %}
+
+{% block content %}
+
+<link rel = "stylesheet" href = "{% static 'css/home.css' %}">
+
+<div class = "container-fluid">
+    <section>
+        <div class = "jumbotron">
+            <h1 class = "display-4"> 联合班级网站 </h1>
+            <br>
+            <p class = "lead"> 学教合一，匠心育人。<br> 做有温度的教育，培养有风度的人。 </p>
+            <hr class = "my-4">
+            <br>
+            <img class = "img-response" src = "{% static 'img/groupphoto.jpg' %}" style = "margin-bottom: 30px; max-width: 49%;">
+            <img class = "img-response" src = "{% static 'img/classes_17.jpg' %}" style = "margin-bottom: 30px; max-width: 49%;">
+            <br>
+            <br>
+            <a class ="btn btn-default btn-lg" href = "{% url 'about:classes' %}" role = "button"> 了解联合班级 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+        </div>
+    </section>
+</div>
+<div class = "container-fluids">
+    <section class = "section1">
+        <div class = "row">
+            <div class = "col-sm-6 col-md-4">
+                <div class = "thumbnail" style = "background-color: rgb(250, 250, 250); margin-top: 30px; margin-bottom: 30px;">
+                    <img src = "{% static 'img/classes_7.jpg' %}">
+                    <div class = "caption">
+                        <h3> 联合班级的同学们 </h3>
+                        <p> 在联合班级，每天都有他们忙碌的身影...... </p>
+                        <p> <a href = "{% url 'about:student' %}"> 联合班级的同学 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-sm-6 col-md-4">
+                <div class = "thumbnail" style = "background-color: rgb(250, 250, 250); margin-top: 30px; margin-bottom: 30px;">
+                    <img src = "{% static 'img/classes_8.jpg' %}">
+                    <div class = "caption">
+                        <h3> 联合班级的老师们 </h3>
+                        <p> 我们的老师，不只是学富五车，更是...... </p>
+                        <p> <a href = "{% url 'about:teacher' %}"> 联合班级的老师 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-sm-6 col-md-4">
+                <div class = "thumbnail" style = "background-color: rgb(250, 250, 250); margin-top: 30px; margin-bottom: 30px;">
+                    <img src = "{% static 'img/classes_13.jpg' %}">
+                    <div class = "caption">
+                        <h3> 资料共享，一同进步 </h3>
+                        <p> 这里有每周需要的资料，到这儿来下载！ </p>
+                        <p> <a href = "{% url 'documentssharing:documentssharing' %}"> 资料共享 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class = "section2">
+        <div class = "row">
+            <div class = "col-md-4"> <img class = "img-response" src = "{% static 'img/classes_18.jpg' %}" style = "max-width: 90%;"> </div>
+            <div class = "col-md-4">
+                <br>
+                <br>
+                <br>
+                <h2 style = "color: white; text-align: center;"> 班级活动 </h2>
+                <p style = "color: white; text-align: center;"> 在每一次大型活动上，联合班级的学生们都展现出了他们的风采 </p>
+                <p style = "color: white; text-align: center;"> <a href = "{% url 'activities:activities' %}"> 班级活动 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+            </div>
+            <div class = "col-md-4"> <img class = "img-response" src = "{% static 'img/classes_19.jpg' %}" style = "max-width: 90%;"> </div>
+        <div class = "col-md-6"> <img class = "img-responsive" src = "{% static 'img/classes_20.jpg' %}" style = "margin-top: 10px; margin-bottom: 30px;"> </div>
+        <div class = "col-md-6"> <img class = "img-responsive" src = "{% static 'img/classes_21.jpg' %}" style = "margin-top: 10px; margin-bottom: 30px;"> </div>
+    </section>
+    <section class = "section3">
+        <div>
+            <h2 style = "text-align: center; margin-top: 30px;"> 各类学科，各样知识，尽在此处 </h2>
+        </div>
+        <p style = "text-align: center;"> 在这里，关注你喜欢的学科的信息，发现你喜欢的学科活动，看优秀同学的学科笔记 </p>
+        <div class = "row">
+            <div class = "col-md-4">
+                <div class = "card">
+                    <img src = "{% static 'img/chinese.jpeg' %}" style = "max-width: 100%;">
+                    <div class = "card-body">
+                        <h4> 语文 </h4>
+                        <p> 一座色彩缤纷的花园，一幅意境深远的油画，一曲旋律优美的音乐，也是美丽的百花园，缤纷的画卷，温暖的阳光，广阔的草原，。蕴含无穷的宝藏，和甘醇的美酒。 </p>
+                        <a href = "{% url 'subjectscenter:subjects' 'chinese' %}" style = "text-align: center;"> 语文 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </span> </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "card">
+                    <img src = "{% static 'img/mathematics.jpeg' %}" style = "max-width: 100%;">
+                    <div class = "card-body">
+                        <h4> 数学 </h4>
+                        <p> 我的充要条件是数学；我把对数学的爱写进每一个微分，然后再求不定积分；它想无穷一样触动我的情感，激励我立志产生富有成果的思想；我热爱又它生成的自由；它是数学。 </p>
+                        <a href = "{% url 'subjectscenter:subjects' 'math' %}" style = "text-align: center;"> 数学 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "card">
+                    <img src = "{% static 'img/english.jpeg' %}" style = "max-width: 100%;">
+                    <div class = "card-body">
+                        <h4> 英语 </h4>
+                        <p> 我喜欢看书，因为能从书中学到很多知识；我喜欢看电影，因为可以看到很多不同的人生；我喜欢一个人静静思考，因为我看到了最理性的自己；我喜欢英语，因为我得以走出我的极限。 </p>
+                        <a href = "{% url 'subjectscenter:subjects' 'english' %}" style = "text-align: center;"> 英语 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class = "row">
+            <div class = "col-md-4">
+                <div class = "card">
+                    <img src = "{% static 'img/physics.jpeg' %}" style = "max-width: 100%;">
+                    <div class = "card-body">
+                        <h4> 物理 </h4>
+                        <p> 这是一门探索自然奥秘的科学，它揭示了宇宙的起源、物质的本质、能量的转化等基本规律；人们用实验和理论，使用这一门具有创造性的学科打开了自然奥秘之门。它是物理。 </p>
+                        <a href = "{% url 'subjectscenter:subjects' 'physics' %}" style = "text-align: center;"> 物理 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "card">
+                    <img src = "{% static 'img/chemistry.jpeg' %}" style = "max-width: 100%;">
+                    <div class = "card-body">
+                        <h4> 化学 </h4>
+                        <p> 氧化氮在空气面前脸红，毫无可能的虚数屈服于共轭，锂来到我的身边将寂寞拥抱成温暖，氮的稳定让我坚信只要默默守护，等来的就是不变的心。让我用化学，解释一切。 </p>
+                        <a href = "{% url 'subjectscenter:subjects' 'chemistry' %}" style = "text-align: center;"> 化学 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "card">
+                    <img src = "{% static 'img/biology.jpeg' %}" style = "max-width: 100%;">
+                    <div class = "card-body">
+                        <h4> 生物 </h4>
+                        <p> 海豚的嬉戏象征着自由快乐，珊瑚将海绵映衬为海底宫殿。萤火虫的微光，长颈鹿的斑点，啄木鸟的听诊器。还有丛林中形形色色的昆虫。让我用生物，了解万物。 </p>
+                        <a href = "{% url 'subjectscenter:subjects' 'biology' %}" style = "text-align: center;"> 生物 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class = "row">
+            <div class = "col-md-4">
+                <div class = "card">
+                    <img src = "{% static 'img/geography.jpeg' %}" style = "max-width: 100%;">
+                    <div class = "card-body">
+                        <h4> 地理 </h4>
+                        <p> “今朝日头乌云托，明朝晒坏乌龟壳”是上海崇明岛，“一日南风三日暴”是江苏南京，“打早打辣雾，尽管洗衫裤”是广西白州，“三日风三日霜三日日头公”是福建厦门。这是地理。 </p>
+                        <a href = "{% url 'subjectscenter:subjects' 'geography' %}" style = "text-align: center;"> 地理 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "card">
+                    <img src = "{% static 'img/history.jpeg' %}" style = "max-width: 100%;">
+                    <div class = "card-body">
+                        <h4> 历史 </h4>
+                        <p> 它由激情和痛苦创造，它是一连串罪恶与灾难的画面，却埋葬了安分守己与清白无辜的平民。它反映过去，让我们有机会展望未来；它孕育真理，抗衡时间，保藏旧事。它是历史。 </p>
+                        <a href = "{% url 'subjectscenter:subjects' 'history' %}" style = "text-align: center;"> 历史 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "card">
+                    <img src = "{% static 'img/politics.jpeg' %}" style = "max-width: 100%;">
+                    <div class = "card-body">
+                        <h4> 政治 </h4>
+                        <p> 九十二年风雨兼程，九十二年岁月沧桑。改革开放，抗日救国，奋战一线。一唱雄鸡天下白，唤来春天照人间。它注重领导力，核心却是遮掩自己的错误。它就是告诉我们世界格局的政治。 </p>
+                        <a href = "{% url 'subjectscenter:subjects' 'politics' %}" style = "text-align: center;"> 政治 <span class = "glyphicon glyphicon-circle-arrow-right"> </span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+body {
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.container, .container-fluids {
+    padding: 20px;
+}
+
+.container-fluids {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.table tbody tr {
+    margin-bottom: 10px;
+}
+
+.text-center {
+    text-align: center;
+}

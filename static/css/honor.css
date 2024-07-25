@@ -1,0 +1,36 @@
+.honor-heading {
+    color: #c9302c;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.thumbnail:hover {
+    border-color: #c9302c;
+}
+
+.thumbnail img {
+    max-width: 100%;
+    height: auto;
+}
+
+.thumbnail h5 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.paging {
+    text-align: center;
+}
+
+.pagination .acitve a {
+    background-color: #c9302c;
+    border-color: #c9302c;
+}
